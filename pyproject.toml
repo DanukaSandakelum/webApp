@@ -1,0 +1,10 @@
+
+[tool.poetry]
+name = "flask-app"
+version = "0.1.0"
+description = "A simple Flask web application"
+authors = ["Replit User"]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+flask = "^3.0.0"
