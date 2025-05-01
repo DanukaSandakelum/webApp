@@ -1,0 +1,56 @@
+~/workspace$ pip install Flask
+Error in sitecustomize; set PYTHONVERBOSE for traceback:
+ModuleNotFoundError: No module named 'pip'
+error: externally-managed-environment
+
+× This environment is externally managed
+╰─> This command has been disabled as it tries to modify the immutable
+    `/nix/store` filesystem.
+    
+    To use Python with Nix and nixpkgs, have a look at the online documentation:
+    <https://nixos.org/manual/nixpkgs/stable/#python>.
+
+note: If you believe this is a mistake, please contact your Python installation or OS distribution provider. You can override this, at the risk of breaking your Python installation or OS, by passing --break-system-packages.
+hint: See PEP 668 for the detailed specification.
+~/workspace$ poetry add Flask
+
+Poetry could not find a pyproject.toml file in /home/runner/workspace or its parents
+~/workspace$ ^C
+~/workspace$ touch pyproject.toml
+~/workspace$ [tool.poetry]
+name = "your_project_name"
+version = "0.1.0"
+description = "A short description of your project"
+authors = ["Your Name <youremail@example.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.8"  # or whatever version you are using
+# Add other dependencies below
+bash: [tool.poetry]: command not found
+name: command not installed, but was located via Nix.
+package: haskellPackages.daemons  0.4.0  Daemons in Haskell made fun and easy
+Would you like to run name from Nix and add it to your project? [Yn]: Y
+haskellPackages.daemons  0.4.0  Daemons in Haskell made fun and easy
+these 5 paths will be fetched (1.34 MiB download, 18.33 MiB unpacked):
+  /nix/store/a4y0kyv7a25lk7kkhgqfi6q1wrhjc8qz-daemons-0.4.0
+  /nix/store/smis88gsxa72ipf3f4bk2ipj2w55vxs8-daemons-0.4.0-data
+  /nix/store/vkgwawarncb4fzdh8yijb4vpg3y5w77n-daemons-0.4.0-doc
+  /nix/store/gfhr9p2v8py2qx0vxm4xz89d64hla23b-pipes-4.3.16
+  /nix/store/78ab9zyj8y7y5va7sh0hf2md1gdy1cyr-pipes-4.3.16-doc
+copying path '/nix/store/smis88gsxa72ipf3f4bk2ipj2w55vxs8-daemons-0.4.0-data' from 'https://cache.nixos.org' to 'local-overlay'...
+copying path '/nix/store/78ab9zyj8y7y5va7sh0hf2md1gdy1cyr-pipes-4.3.16-doc' from 'https://cache.nixos.org' to 'local-overlay'...
+copying path '/nix/store/vkgwawarncb4fzdh8yijb4vpg3y5w77n-daemons-0.4.0-doc' from 'https://cache.nixos.org' to 'local-overlay'...
+copying path '/nix/store/gfhr9p2v8py2qx0vxm4xz89d64hla23b-pipes-4.3.16' from 'https://cache.nixos.org' to 'local-overlay'...
+copying path '/nix/store/a4y0kyv7a25lk7kkhgqfi6q1wrhjc8qz-daemons-0.4.0' from 'https://cache.nixos.org' to 'local-overlay'...
+/nix/store/a4y0kyv7a25lk7kkhgqfi6q1wrhjc8qz-daemons-0.4.0
+Adding haskellPackages.daemons to .replit
+Daemon started on port 4370
+name: invalid command
+CallStack (from HasCallStack):
+  error, called at examples/Name.hs:82:11 in main:Main
+version: command not installed. Multiple versions of this command were found in Nix.
+Select one to run (or press Ctrl-C to cancel):
+bash: description: command not found
+bash: authors: command not found
+bash: [tool.poetry.dependencies]: command not found
+python: can't open file '/home/runner/workspace/=': [Errno 2] No such file or directory
