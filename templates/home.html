@@ -1,10 +1,68 @@
-<!DOCTYPE html>  
-<html>
-    <head>
-        <title>Home Page</title>
-    </head>
-    <body>
-        <h1>Welcome to the Home Page</h1>
-        <p>This is a simple home page.</p>
-    </body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beautiful Animated Website</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Welcome to Our Beautiful Website</h1>
+        <p>Experience the perfect blend of stunning visuals and smooth animations. Our platform combines elegant design with cutting-edge technology to deliver an unforgettable browsing experience. Every element has been carefully crafted to create harmony between form and function.</p>
+        <p>Scroll down to discover more about our services and see the beautiful animated panels that make this website unique.</p>
+    </main>
+
+    <div class="container">
+        <div class="left-panel">
+            <h2>Creative Design</h2>
+            <p>Our team of talented designers creates visually stunning interfaces that captivate your audience while maintaining perfect usability.</p>
+        </div>
+        <div class="right-panel">
+            <h2>Smooth Animations</h2>
+            <p>Enjoy buttery-smooth transitions and animations that enhance user experience without compromising performance.</p>
+        </div>
+    </div>
+
+    <script>
+
+        document.addEventListener('DOMContentLoaded', function() {
+
+            window.addEventListener('scroll', function() {
+                const nav = document.querySelector('nav');
+                if (window.scrollY > 50) {
+                    nav.style.height = '60px';
+                    nav.style.boxShadow = '0 4px 30px rgba(222, 10, 242, 0.3)';
+                } else {
+                    nav.style.height = '70px';
+                    nav.style.boxShadow = '0 4px 30px rgba(0, 0, 0, 0.3)';
+                }
+            });
+
+
+            const panels = document.querySelectorAll('.left-panel, .right-panel');
+            panels.forEach(panel => {
+                panel.addEventListener('click', function() {
+                    this.style.transform = 'scale(0.98)';
+                    setTimeout(() => {
+                        this.style.transform = 'scale(1.02)';
+                    }, 300);
+                });
+            });
+        });
+    </script>
+</body>
 </html>
