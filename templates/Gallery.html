@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Stunning Gallery</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+        <ul class="nav-container">
+            <li><a href="/" class="nav-item">Home</a></li>
+            <li><a href="/features" class="nav-item">Features</a></li>
+            <li><a href="/gallery" class="nav-item active">Gallery</a></li>
+            <li><a href="/about" class="nav-item">About</a></li>
+            <li><a href="/contact" class="nav-item">Contact</a></li>
+        </ul>
+    </nav>
+  </header>
+
+  <main class="gallery-main">
+    <section class="gallery-hero">
+      <h1 class="hero-title">Explore Our <span>Stunning</span> Gallery</h1>
+      <p class="hero-subtitle">A visual journey through our work and achievements</p>
+      <div class="scroll-down"><i class="fas fa-chevron-down"></i></div>
+    </section>
+
+    <section class="gallery-filter">
+      <h2>Filter Gallery</h2>
+      <div class="filter-buttons">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="design">Design</button>
+        <button class="filter-btn" data-filter="development">Development</button>
+        <button class="filter-btn" data-filter="marketing">Marketing</button>
+        <button class="filter-btn" data-filter="branding">Branding</button>
+      </div>
+    </section>
+
+    <section class="gallery-container">
+      <!-- Items will be loaded dynamically -->
+      <div class="loading"><i class="fas fa-spinner fa-spin"></i> Loading gallery...</div>
+    </section>
+
+    <section class="gallery-cta">
+      <h2>Ready to Start Your Project?</h2>
+      <p>Contact us today to discuss how we can bring your vision to life</p>
+      <a href="#" class="cta-button">Get in Touch</a>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 YourCompany. All rights reserved.</p>
+    <div class="social-links">
+      <a href="#"><i class="fab fa-facebook"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-linkedin"></i></a>
+    </div>
+  </footer>
+
+  <!-- Lightbox modal -->
+  <div id="lightbox-modal" class="lightbox-modal">
+    <span class="close-modal">&times;</span>
+    <div class="modal-content-wrapper">
+      <img class="modal-content" id="modal-image">
+      <div class="modal-caption" id="modal-caption"></div>
+    </div>
+  </div>
+
+  <script src="gallery.js"></script>
+</body>
+</html>

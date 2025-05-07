@@ -292,6 +292,6 @@ nav ul li a:hover::before {
 
   .features-grid {
       grid-template-columns: 1fr;
-      padding: 60px 20px;
+      padding: 0;
   }
 }
