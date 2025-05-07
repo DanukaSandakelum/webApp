@@ -10,5 +10,9 @@ def hello_world():
 def features():
     return render_template('Features.html')
 
+@app.route("/gallery")
+def gallery():
+    return render_template('Gallery.html')
+
 if __name__ == "__main__":
     app.run(host ='0.0.0.0',debug=True)
